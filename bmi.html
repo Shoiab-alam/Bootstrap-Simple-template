@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<style>
+
+</style>
+<body>
+
+ 
+
+    <script>
+
+
+// const currency = new Map([
+//     ['USD', 'United States Dollar'],
+//     ['RS', 'Indian Rupees'],
+//     ['EURO', 'Europe Currency'],
+// ])
+
+// currency.forEach((country , rs, map) =>{
+//     console.log(rs, 'is the' ,country)
+// });
+
+// // let currencyUnique = new Set(['USD','RS','EURO','USD','RS','EURO']);
+// // console.log(currencyUnique);
+
+// // currencyUnique.forEach((value, key) => {
+// //     console.log(key, ':7',value)
+// // })
+
+// const account1 = {
+//     owner : 'Shoiab alam',
+//     movements : [200,450,-400,3000,-650,-130,70,1300],
+//     interestRare : 1.2,
+//     pin : 1111,
+// };
+// const account2 = {
+//     owner : 'Kousain alam',
+//     movements : [200,450,-400,3000,-650,-130,70,1300],
+//     interestRare : 1.2,
+//     pin : 1111,
+// }
+// const account3 = {
+//     owner : 'Hasnain alam',
+//     movements : [200,450,-400,3000,-650,-130,70,1300],
+//     interestRare : 1.2,
+//     pin : 1111,
+
+// }
+
+// const accounts = [account1, account2, account3];
+
+// const createUserNames = (accs) => {
+//     accs.forEach(accs1 => {
+//         accs1.userNames = accs1.owner
+//         .toLowerCase()
+//         .split(' ')
+//         .map(first => first[0])
+//         .join(' ')
+//     });
+// };
+// createUserNames(accounts);
+// console.log(accounts)
+
+const movements = [200,450,-400,3000,-650,-130,70,1300];
+console.log('------Total ------', movements);
+
+const deposited = movements.filter(mov => mov > 0);
+console.log(deposited)
+
+const Withdraw = movements.filter(mov => mov < 0);
+console.log(Withdraw);
+
+const totalBalance = movements.reduce((accu, cur, i) => {
+    console.log(`Iteration ${i}: ${cur}`)
+    return accu + cur;
+},0);
+
+console.log('--Total Balance--',totalBalance);
+
+let Balance2 = 0;
+for(const mov of movements) Balance2 += mov;
+console.log(Balance2);
+
+
+// const euroToUsd = 1.1;
+// const movements = [100,200,300,400,500,600,700,800,900];
+
+// const movementUsd = movements.map(arrs => arrs * euroToUsd);
+// console.log(movements);
+// console.log(movementUsd);
+
+
+// const movementsUsdFor = [];
+// for(const mov of movementUsd)movementsUsdFor.push(mov * euroToUsd);
+// console.log(movementsUsdFor);
+
+// const move1 = movements.map((mov, i) => `Movement: ${i + 1} You ${mov > 0 ? 'Deposited': 'Withdraw'} ${mov}`);
+// console.log(move1)
+
+// movementUsd.forEach(((key, value) => {
+//     console.log(value, key)
+// }))
+
+
+// console.log(...account);
+
+
+
+        // //1st
+        // const one = document.querySelectorAll('.one');
+
+        // const oo = () => 
+        //     one.forEach((arr) => {
+        //         arr.textContent = 'Hello World';
+        //     })
+        // }
+
+        // setInterval(oo(), 1000);
+
+
+
+        // //2nd star Pattern //
+        // for (let i = 1; i <= 5; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         document.write(j, '&nbsp;&nbsp;');
+        //     }
+        //     document.write('<br>')
+        // };
+
+        // //3rd
+
+        // const secondLargestNumber = (arr) => {
+        //     highest = 0;
+        //     second = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] > highest) {
+        //             second = highest;
+        //             highest = arr[i];
+        //         }
+        //     }
+        //     document.write(highest);
+        //     document.write(second);
+        // }
+
+        // secondLargestNumber([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        // ///1st secondLargestNumber //
+
+        // // const secondLargestNumber = (array) => {
+        // //     let highest = 0;
+        // //     let secondNumber = 0;
+        // //     for(let i = 0;i< array.length;i++){
+        // //         if(array[i] > highest){
+        // //             secondNumber = highest;
+        // //             highest = array[i];
+        // //         }
+        // //     }
+        // //     document.write(highest);
+        // //     document.write(secondNumber);
+        // // }
+        // // secondLargestNumber([1,2,3,4,5,6,7]);
+
+
+        // //2st star Patter //
+
+        // // for(let i = 5;i >= 1;i--){
+        // //     for(let j = 1;j <= i;j++){
+        // //         document.write('*', '&nbsp;&nbsp;')
+        // //     }
+        //     document.write('<br>')
+        // }
+
+
+
+
+        // 3rd //
+
+        // const array = [1,0,2,0,3,0,4,0,5,0];
+        // // const newarray = array.sort();
+        // // const slice = newarray.slice(0,5);
+        // // const newSlice = newarray.slice(5);
+        // // console.log([...newSlice, ...slice])
+
+        // // for(let i = 0;i < array.length;i++){
+        // //          if(array[i] != 0){
+        // //             console.log(array[i]);
+        // //         }
+
+        // // }
+
+        // const currency = new Map([
+        //     ['USD', 'UNITED STATES OF AMERICA'],
+        //     ['RS', 'UNITED STATES OF INDIA'],
+        //     ['EUR', 'THE STATES OF EUROPE'],
+        //     ['RIYAL', 'THE UNITED STATES OF ARAB']
+        // ]);
+
+        // currency.forEach(function (value, key, map) {
+        //     console.log(` ${key}; ${value}`)
+        // })
+
+        // ///set
+        // const currencyUnique = new Set(['USD', 'RS', 'EUR', 'USD', 'RS', 'EUR']);
+        // currencyUnique.forEach(function (key, value, map) {
+        //     console.log(value, ':', key)
+        // })
+    </script>
+</body>
+
+</html>
